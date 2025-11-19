@@ -1,0 +1,50 @@
+:root{--bg:#0f1724;--card:#0b1220;--muted:#94a3b8;--accent:#06b6d4;--accent-2:#7c3aed;--glass:rgba(255,255,255,0.03);--radius:12px}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;color:#e6eef6;background:linear-gradient(180deg,#071021 0%,#071a2b 100%);-webkit-font-smoothing:antialiased}
+.visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
+.skip-link{position:absolute;left:-9999px;top:-9999px}
+.skip-link:focus{position:fixed;left:12px;top:12px;z-index:9999;background:var(--accent);color:#042027;padding:8px 12px;border-radius:8px;font-weight:700}
+.app{max-width:1100px;margin:28px auto;padding:18px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:800;color:#042027;font-size:24px;box-shadow:0 8px 24px rgba(6,182,212,0.18)}
+h1{margin:0;font-size:20px}
+.subtitle{margin:0;color:var(--muted);font-size:13px}
+.actions{display:flex;align-items:center;gap:10px}
+.search-wrap{min-width:180px}
+.search{padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:var(--glass);color:inherit;width:260px}
+.search:focus{outline:2px solid var(--accent);outline-offset:2px}
+.select{padding:9px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:inherit}
+.btn{background:var(--accent);border:none;padding:9px 12px;border-radius:10px;color:#042027;font-weight:700;cursor:pointer}
+.btn:hover{filter:brightness(1.05)}
+.btn:focus{outline:2px solid var(--accent);outline-offset:2px}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--accent)}
+.layout{display:grid;grid-template-columns:1fr 320px;gap:18px;margin-top:18px}
+.section-title{margin:0 0 10px 0}
+.products{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:12px;border-radius:var(--radius);border:1px solid rgba(255,255,255,0.02)}
+.product{display:flex;flex-direction:column;gap:8px;transition:transform .18s ease,box-shadow .18s ease}
+.product:hover{transform:translateY(-6px);box-shadow:0 8px 30px rgba(0,0,0,0.45)}
+.product-img{height:140px;border-radius:8px;background:linear-gradient(135deg,#0ea5a4,var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:700;color:#022}
+.prod-title{font-weight:700}
+.small{color:var(--muted);font-size:13px}
+.meta{display:flex;align-items:center;justify-content:space-between;margin-top:6px}
+.price{font-weight:800}
+.sidebar .card{margin-bottom:12px}
+.cart-list{display:flex;flex-direction:column;gap:10px;max-height:320px;overflow:auto;padding:6px}
+.cart-item{display:flex;gap:8px;align-items:center}
+.qty{display:inline-flex;align-items:center;border-radius:8px;background:rgba(255,255,255,0.03);padding:4px}
+.cart-footer{margin-top:12px;display:flex;justify-content:space-between;align-items:center}
+.cart-actions{display:flex;gap:8px}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+.resume-modal{border:none;border-radius:12px;padding:0;background:transparent}
+.resume-doc{width:760px;max-width:95vw;background:#fff;color:#042027;border-radius:12px;padding:20px;box-shadow:0 20px 70px rgba(0,0,0,0.5)}
+.resume-doc header h2{margin:0}
+.resume-doc .muted{color:#6b7280}
+.resume-cta{display:flex;justify-content:flex-end;gap:8px;margin-top:12px}
+.toast{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);background:rgba(13,18,28,0.9);color:#e6eef6;border:1px solid rgba(255,255,255,0.08);padding:10px 14px;border-radius:10px;opacity:0;pointer-events:none;transition:opacity .18s ease,transform .18s ease;z-index:999}
+.toast.show{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(-4px)}
+footer.foot{text-align:center;margin-top:18px;color:var(--muted);font-size:13px}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.actions{flex-direction:column;align-items:stretch}.search{width:100%}}

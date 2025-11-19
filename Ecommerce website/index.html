@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Biswajit Behera — Portfolio Shop</title>
+  <meta name="description" content="Biswajit Behera's portfolio and demo e-commerce showcasing books, dev tools, and merch. Download resume and explore projects." />
+  <meta name="theme-color" content="#071021" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="app">
+    <header class="top" role="banner">
+      <div class="brand">
+        <div class="logo" aria-label="Biswajit logo">B</div>
+        <div>
+          <h1>Biswajit Behera</h1>
+          <p class="subtitle">Portfolio • Demo e‑commerce • Download Resume</p>
+        </div>
+      </div>
+
+      <div class="actions">
+        <div class="search-wrap">
+          <label class="visually-hidden" for="search">Search products</label>
+          <input id="search" class="search" placeholder="Search products, e.g. Java, book..." aria-label="Search products" autocomplete="off">
+        </div>
+
+        <label class="visually-hidden" for="category">Filter category</label>
+        <select id="category" class="select" aria-label="Filter category">
+          <option value="all">All categories</option>
+          <option value="books">Books</option>
+          <option value="dev">Dev Tools</option>
+          <option value="merch">Merch</option>
+        </select>
+
+        <button id="view-resume" class="btn ghost" aria-haspopup="dialog" aria-controls="resume-modal">View Resume</button>
+        <button id="open-cart" class="btn" aria-controls="sidebar" aria-expanded="true">Cart (<span id="cart-count">0</span>)</button>
+      </div>
+    </header>
+
+    <main id="main" class="layout" role="main">
+      <section class="products-area">
+        <h2 class="section-title">Products</h2>
+        <div id="products" class="products" aria-live="polite"></div>
+      </section>
+
+      <aside class="sidebar" id="sidebar" aria-label="Sidebar">
+        <div class="cart card" id="cart-panel">
+          <h3>Cart</h3>
+          <div id="cart-list" class="cart-list"><div class="muted">Your cart is empty</div></div>
+          <div class="cart-footer">
+            <div>Total: <strong>₹<span id="cart-total">0</span></strong></div>
+            <div class="cart-actions">
+              <button id="checkout" class="btn" aria-label="Checkout">Checkout</button>
+              <button id="clear-cart" class="btn ghost" aria-label="Clear cart">Clear</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card profile">
+          <h4>Contact</h4>
+          <div class="muted small">Email</div>
+          <a id="email-link" href="mailto:biswajit.behera@example.com">biswajit.behera@example.com</a>
+          <div class="muted small" style="margin-top:8px">LinkedIn</div>
+          <a id="linkedin" href="https://linkedin.com/in/biswajit-behera" target="_blank" rel="noopener">linkedin.com/in/biswajit-behera</a>
+          <div class="muted small" style="margin-top:8px">GitHub</div>
+          <a id="github" href="https://github.com/biswajitbehera" target="_blank" rel="noopener">github.com/biswajitbehera</a>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="foot">
+      © <span id="year"></span> Biswajit Behera • Bhubaneswar, Odisha • All rights reserved
+    </footer>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <dialog id="resume-modal" class="resume-modal" aria-labelledby="resume-title">
+    <div class="resume-doc" role="document">
+      <header style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+        <h2 id="resume-title">Resume — Biswajit Behera</h2>
+        <button id="close-resume" class="btn ghost" aria-label="Close resume">Close</button>
+      </header>
+      <p class="muted">Download or view the latest version of my resume.</p>
+      <div class="resume-cta">
+        <a class="btn ghost" href="assets/resume.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="btn" href="assets/resume.pdf" download>Download</a>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
